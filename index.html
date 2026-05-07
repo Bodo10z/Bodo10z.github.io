@@ -300,11 +300,19 @@
   </section>
 
   <script>
-    // Visitor Counter
+    // Visitor Counter - unique visitors only
     function initVisitorCounter() {
-      let count = localStorage.getItem('bodo-visitors') || 0;
-      count = parseInt(count) + 1;
-      localStorage.setItem('bodo-visitors', count);
+      let visitorId = localStorage.getItem('bodo-visitor-id');
+      let count = parseInt(localStorage.getItem('bodo-visitors') || 0);
+      
+      // Wenn keine Visitor ID existiert, neue ID erstellen und counter erhöhen
+      if(!visitorId) {
+        visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('bodo-visitor-id', visitorId);
+        count += 1;
+        localStorage.setItem('bodo-visitors', count);
+      }
+      
       document.getElementById('visitor-count').textContent = count;
     }
     initVisitorCounter();
