@@ -141,6 +141,27 @@
       width:10px;height:10px;border-radius:50%;
       background:rgba(255,255,255,0.5);cursor:pointer;
       transition:background .3s,transform .3s;
+      position:relative;
+    }
+    .dot::after {
+      content: attr(title);
+      position: absolute;
+      left: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .dot:hover::after {
+      opacity: 1;
     }
     .dot.active{background:#fff;transform:scale(1.8)}
 
@@ -162,14 +183,14 @@
   <div class="bg-layer" id="bg-6"></div>
 
   <div id="dots">
-    <div class="dot active" onclick="goto(0)"></div>
-    <div class="dot" onclick="goto(1)"></div>
-    <div class="dot" onclick="goto(2)"></div>
-    <div class="dot" onclick="goto(3)"></div>
-    <div class="dot" onclick="goto(4)"></div>
-    <div class="dot" onclick="goto(5)"></div>
-    <div class="dot" onclick="goto(6)"></div>
-    <div class="dot" onclick="goto(7)"></div>
+    <div class="dot active" onclick="goto(0)" title="Bodo"></div>
+    <div class="dot" onclick="goto(1)" title="Über mich"></div>
+    <div class="dot" onclick="goto(2)" title="Gaming"></div>
+    <div class="dot" onclick="goto(3)" title="Ausbildung"></div>
+    <div class="dot" onclick="goto(4)" title="Alysa Liu"></div>
+    <div class="dot" onclick="goto(5)" title="Laufey"></div>
+    <div class="dot" onclick="goto(6)" title="Lübeck"></div>
+    <div class="dot" onclick="goto(7)" title="Social Media"></div>
   </div>
 
   <section id="s0" data-bg="0">
