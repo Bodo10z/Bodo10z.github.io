@@ -138,11 +138,11 @@
       z-index:10;display:flex;flex-direction:column;gap:10px;
     }
     .dot{
-      width:7px;height:7px;border-radius:50%;
-      background:rgba(0,0,0,0.2);cursor:pointer;
+      width:10px;height:10px;border-radius:50%;
+      background:rgba(255,255,255,0.5);cursor:pointer;
       transition:background .3s,transform .3s;
     }
-    .dot.active{background:#3a7a3a;transform:scale(1.6)}
+    .dot.active{background:#fff;transform:scale(1.8)}
 
     @media(max-width:500px){
       .card{padding:1.6rem 1.4rem}
@@ -176,9 +176,6 @@
     <canvas id="particles" style="position:absolute;inset:0;z-index:0;pointer-events:none;"></canvas>
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;">
       <h1 class="hero-name">Bodo</h1>
-      <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.5);margin-top:0.8rem;">
-        👁️ <span id="visitor-count">0</span>
-      </div>
     </div>
     <div class="scroll-hint">
       <span>scrollen</span>
@@ -300,22 +297,6 @@
   </section>
 
   <script>
-    // Visitor Counter - unique visitors only
-    function initVisitorCounter() {
-      let visitorId = localStorage.getItem('bodo-visitor-id');
-      let count = parseInt(localStorage.getItem('bodo-visitors') || 0);
-      
-      // Wenn keine Visitor ID existiert, neue ID erstellen und counter erhöhen
-      if(!visitorId) {
-        visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-        localStorage.setItem('bodo-visitor-id', visitorId);
-        count += 1;
-        localStorage.setItem('bodo-visitors', count);
-      }
-      
-      document.getElementById('visitor-count').textContent = count;
-    }
-    initVisitorCounter();
     // Cursor follower particles
     class CursorParticle {
       constructor(x, y) {
