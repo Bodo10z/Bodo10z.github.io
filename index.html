@@ -204,28 +204,22 @@
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 14px;
-  padding: 10px 22px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  opacity: 0;
+  pointer-events: none;
   z-index: 9999;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 ">
-  <a id="2168285" href="https://handyhaus.de" target="_blank" style="
-    color: rgba(255,255,255,0.85);
-    text-decoration: none;
-    font-size: 13px;
-  ">handyhaus.de Besucherzähler</a>
+  <a id="2168285" href="https://handyhaus.de" target="_blank">handyhaus.de Besucherzähler</a>
   <script language="javascript" type="text/javascript"
     src="https://handyhaus.de/counter_js.php?account=2168285&style=6">
   </script>
 </div>
+
+<script>
+  // Nur auf der Startseite (index / "/") anzeigen – sonst unsichtbar lassen
+  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    document.currentScript.previousElementSibling; // Box bleibt unsichtbar
+  }
+</script>
    
     <div class="scroll-hint">
       <span>scrollen</span>
