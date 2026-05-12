@@ -199,13 +199,14 @@
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;">
       <h1 class="hero-name">Bodo</h1>
     </div>
-    <div style="
+   <div style="
   position: fixed;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0;
-  pointer-events: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   z-index: 9999;
 ">
   <a id="2168285" href="https://handyhaus.de" target="_blank">handyhaus.de Besucherzähler</a>
@@ -213,13 +214,6 @@
     src="https://handyhaus.de/counter_js.php?account=2168285&style=6">
   </script>
 </div>
-
-<script>
-  // Nur auf der Startseite (index / "/") anzeigen – sonst unsichtbar lassen
-  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    document.currentScript.previousElementSibling; // Box bleibt unsichtbar
-  }
-</script>
    
     <div class="scroll-hint">
       <span>scrollen</span>
