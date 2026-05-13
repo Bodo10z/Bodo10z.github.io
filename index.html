@@ -198,9 +198,9 @@
   <canvas id="particles" style="position:absolute;inset:0;z-index:0;pointer-events:none;"></canvas>
   <style>
     .fw {
-      position: absolute;
+      position: relative;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 17px;
       color: rgba(255,255,255,0.65);
       white-space: nowrap;
       transition: color 0.2s;
@@ -212,31 +212,30 @@
       50%       { transform: translateY(-8px); }
     }
   </style>
-<div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;">
-  <div style="display:grid;grid-template-columns:220px auto 220px;align-items:center;gap:60px;">
+  <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;">
+    <div style="display:grid;grid-template-columns:220px auto 220px;align-items:center;gap:60px;">
 
-    <!-- Links -->
-    <div style="display:flex;flex-direction:column;gap:28px;text-align:right;">
-      <span class="fw" style="animation-delay:0s;font-size:17px;"   onclick="goto(3)">Lieblingsanime</span>
-      <span class="fw" style="animation-delay:0.3s;font-size:17px;" onclick="goto(8)">Social Media</span>
-      <span class="fw" style="animation-delay:0.6s;font-size:17px;" onclick="goto(4)">Ausbildung</span>
-      <span class="fw" style="animation-delay:0.9s;font-size:17px;" onclick="goto(7)">Wohnort</span>
+      <!-- Links -->
+      <div style="display:flex;flex-direction:column;gap:28px;text-align:right;">
+        <span class="fw" style="animation-delay:0s;"    onclick="goto(3)">Lieblingsanime</span>
+        <span class="fw" style="animation-delay:0.3s;"  onclick="goto(8)">Social Media</span>
+        <span class="fw" style="animation-delay:0.6s;"  onclick="goto(4)">Ausbildung</span>
+        <span class="fw" style="animation-delay:0.9s;"  onclick="goto(7)">Wohnort</span>
+      </div>
+
+      <h1 class="hero-name" style="margin:0;white-space:nowrap;text-align:center;font-size:clamp(40px,6vw,80px);">Bodo</h1>
+
+      <!-- Rechts -->
+      <div style="display:flex;flex-direction:column;gap:28px;text-align:left;">
+        <span class="fw" style="animation-delay:1.2s;"  onclick="goto(1)">Über mich</span>
+        <span class="fw" style="animation-delay:1.5s;"  onclick="goto(6)">Vorbild</span>
+        <span class="fw" style="animation-delay:1.8s;"  onclick="goto(5)">Lieblingskünstlerin</span>
+        <span class="fw" style="animation-delay:2.1s;"  onclick="goto(2)">Lieblingsspiele</span>
+      </div>
+
     </div>
-
-    <h1 class="hero-name" style="margin:0;white-space:nowrap;text-align:center;">Bodo</h1>
-
-    <!-- Rechts -->
-    <div style="display:flex;flex-direction:column;gap:28px;text-align:left;">
-      <span class="fw" style="animation-delay:1.2s;font-size:17px;" onclick="goto(1)">Über mich</span>
-      <span class="fw" style="animation-delay:1.5s;font-size:17px;" onclick="goto(6)">Vorbild</span>
-      <span class="fw" style="animation-delay:1.8s;font-size:17px;" onclick="goto(5)">Lieblingskünstlerin</span>
-      <span class="fw" style="animation-delay:2.1s;font-size:17px;" onclick="goto(2)">Lieblingsspiele</span>
-    </div>
-
+    <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=RUjbGlErp9&start=0&design=1c"></script>
   </div>
-  <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=RUjbGlErp9&start=0&design=1c"></script>
-</div>
-  
 </section>
     
   </section>
