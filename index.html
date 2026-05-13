@@ -196,44 +196,8 @@
 
 <section id="s0" data-bg="0">
   <canvas id="particles" style="position:absolute;inset:0;z-index:0;pointer-events:none;"></canvas>
-  <style>
-    .fw {
-      position: relative;
-      cursor: pointer;
-      font-size: 17px;
-      color: rgba(255,255,255,0.65);
-      white-space: nowrap;
-      transition: color 0.2s;
-      animation: fw-float 3s ease-in-out infinite;
-    }
-    .fw:hover { color: #fff; }
-    @keyframes fw-float {
-      0%, 100% { transform: translateY(0px); }
-      50%       { transform: translateY(-8px); }
-    }
-  </style>
   <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;">
-    <div style="display:grid;grid-template-columns:220px auto 220px;align-items:center;gap:60px;">
-
-      <!-- Links: kurz → lang (oben → unten) -->
-      <div style="display:flex;flex-direction:column;gap:28px;text-align:right;">
-        <span class="fw" style="animation-delay:0s;"   onclick="goto(7)">Wohnort</span>
-        <span class="fw" style="animation-delay:0.3s;" onclick="goto(4)">Ausbildung</span>
-        <span class="fw" style="animation-delay:0.6s;" onclick="goto(8)">Social Media</span>
-        <span class="fw" style="animation-delay:0.9s;" onclick="goto(3)">Lieblingsanime</span>
-      </div>
-
-      <h1 class="hero-name" style="margin:0;white-space:nowrap;text-align:center;font-size:clamp(50px,8vw,100px);">Bodo</h1>
-
-      <!-- Rechts: lang → kurz (oben → unten) -->
-      <div style="display:flex;flex-direction:column;gap:28px;text-align:left;">
-        <span class="fw" style="animation-delay:1.2s;" onclick="goto(5)">Lieblingskünstlerin</span>
-        <span class="fw" style="animation-delay:1.5s;" onclick="goto(2)">Lieblingsspiele</span>
-        <span class="fw" style="animation-delay:1.8s;" onclick="goto(1)">Über mich</span>
-        <span class="fw" style="animation-delay:2.1s;" onclick="goto(6)">Vorbild</span>
-      </div>
-
-    </div>
+    <h1 class="hero-name">Bodo</h1>
     <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=RUjbGlErp9&start=0&design=1c"></script>
   </div>
 </section>
